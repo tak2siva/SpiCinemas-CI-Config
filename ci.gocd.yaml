@@ -1,0 +1,31 @@
+format_version: 2
+environments:
+  ci:
+    pipelines:
+      - ui
+      - backend
+pipelines:
+  ui:
+    name: just-cinemas-ui
+    group: just-cinemas
+    materials:
+      ui:
+        git: git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-ui.git
+    stages:
+      - unit:
+        jobs:
+          test:
+            script: |
+              echo "it works"
+  backend:
+    name: just-cinemas-backend
+    group: just-cinemas
+    materials:
+      backend:
+        git: git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-services.git
+    stages:
+      - unit:
+        jobs:
+          test:
+            script: |
+              echo "it works"
