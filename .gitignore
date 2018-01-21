@@ -1,7 +1,7 @@
 godata/addons/
 godata/artifacts
 godata/config/cruise-config.xml
-godata/db
+godata/db/
 godata/logs
 godata/plugins/bundled
 godata/plugins/*.zip

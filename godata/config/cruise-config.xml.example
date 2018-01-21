@@ -14,8 +14,8 @@ schemaVersion="100">
             <git url="git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-ci.git" />
         </config-repo>
     </config-repos>
-    <pipelines group="movies" />
+    <pipelines group="just-cinemas" />
     <environments>
-        <environment name="ci"></environment>
+        <environment name="ci" />
     </environments>
 </cruise>
