@@ -11,6 +11,12 @@ pipelines:
             test:
               resources:
                 - java
+              artifacts:
+                - test:
+                    source: build/reports/tests/test/
+                    destination: test-reports/
+              tabs:
+                report: test-reports/index.html
               tasks:
                 - script: |
                     cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
@@ -18,6 +24,10 @@ pipelines:
       - build:
           jobs:
             build:
+              artifacts:
+                - build:
+                    source: build/libs/
+                    destination: libs/
               resources:
                 - java
               tasks:
