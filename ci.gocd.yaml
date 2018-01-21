@@ -32,12 +32,17 @@ pipelines:
       - build:
           jobs:
             build:
+              artifacts:
+                source: dist
+                destination: dist
+              tabs:
+                dist: dist
               resources:
                 - node
               tasks:
                 - script: |
                     npm install
-                    npm run build
+                    npm run dist
   "cinemas-api":
     group: just-cinemas
     materials:
