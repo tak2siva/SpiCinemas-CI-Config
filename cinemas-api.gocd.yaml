@@ -16,7 +16,7 @@ pipelines:
                     source: build/reports/tests/**
                     destination: test-reports/
               tabs:
-                report: test-reports/index.html
+                Report: test-reports/build/reports/tests/test/index.html
               tasks:
                 - script: |
                     cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
