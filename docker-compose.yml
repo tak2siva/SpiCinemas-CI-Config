@@ -14,7 +14,7 @@ services:
       - $PWD/.ssh:/home/go/.ssh
 
   agent-java:
-    image: gocd/gocd-agent-alpine-3.5:v17.12.0
+    image: jskswamy/gocd-agent-debian-8-java:v17.12.0
     depends_on:
       - server
     environment:
@@ -38,4 +38,4 @@ services:
     environment:
       POSTGRES_USER: testuser
       POSTGRES_PASSWORD: testpass
-      POSTGRES_DB: just_cinemas_test
+      POSTGRES_DB: testdb
