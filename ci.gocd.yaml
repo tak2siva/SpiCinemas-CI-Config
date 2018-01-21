@@ -36,8 +36,6 @@ pipelines:
                 - build:
                     source: dist
                     destination: dist
-              tabs:
-                dist: dist
               resources:
                 - node
               tasks:
@@ -50,9 +48,18 @@ pipelines:
       cinemas-backend:
         git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-services.git"
     stages:
+      - test:
+          jobs:
+            test:
+              tasks:
+                - script: |
+                    ./gradlew clean test
       - build:
           jobs:
             build:
+              resources:
+                - java
               tasks:
                 - script: |
-                    echo "it works"
+                    cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
+                    ./gradlew clean test

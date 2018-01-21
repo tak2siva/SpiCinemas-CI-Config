@@ -36,6 +36,6 @@ services:
   db:
     image: postgres:9.6.6
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: just_cinemas
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+      POSTGRES_DB: just_cinemas_test
