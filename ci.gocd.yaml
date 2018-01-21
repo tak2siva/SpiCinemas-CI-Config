@@ -5,27 +5,27 @@ environments:
       - ui
       - backend
 pipelines:
-  ui:
-    name: just-cinemas-ui
-    group: just-cinemas
+  "cinemas-ui":
+    group: movies
     materials:
-      ui:
+      cinemas-ui:
         git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-ui.git"
     stages:
-      - unit:
-        jobs:
-          test:
-            script: |
-              echo "it works"
-  backend:
-    name: just-cinemas-backend
-    group: just-cinemas
+      - build:
+          jobs:
+            build:
+              tasks:
+                - script: |
+                    echo "it works"
+  "cinemas-api":
+    group: movies
     materials:
-      backend:
+      cinemas-backend:
         git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-services.git"
     stages:
-      - unit:
-        jobs:
-          test:
-            script: |
-              echo "it works"
+      - build:
+          jobs:
+            build:
+              tasks:
+                - script: |
+                    echo "it works"
