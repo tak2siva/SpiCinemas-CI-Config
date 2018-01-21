@@ -1,9 +1,4 @@
 format_version: 2
-environments:
-  ci:
-    pipelines:
-      - "cinemas-ui"
-      - "cinemas-api"
 pipelines:
   "cinemas-ui":
     group: just-cinemas
@@ -42,24 +37,3 @@ pipelines:
                 - script: |
                     npm install
                     npm run dist
-  "cinemas-api":
-    group: just-cinemas
-    materials:
-      cinemas-backend:
-        git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-services.git"
-    stages:
-      - test:
-          jobs:
-            test:
-              tasks:
-                - script: |
-                    ./gradlew clean test
-      - build:
-          jobs:
-            build:
-              resources:
-                - java
-              tasks:
-                - script: |
-                    cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
-                    ./gradlew clean test
