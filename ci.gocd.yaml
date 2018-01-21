@@ -10,7 +10,7 @@ pipelines:
     group: just-cinemas
     materials:
       ui:
-        git: git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-ui.git
+        git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-ui.git"
     stages:
       - unit:
         jobs:
@@ -22,7 +22,7 @@ pipelines:
     group: just-cinemas
     materials:
       backend:
-        git: git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-services.git
+        git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-services.git"
     stages:
       - unit:
         jobs:

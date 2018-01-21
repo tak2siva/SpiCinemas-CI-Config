@@ -8,6 +8,6 @@
   </config-repos>
   <pipelines group="movies" />
   <agents>
-    <agent hostname="d46b3ffdc7a8" ipaddress="172.18.0.3" uuid="ab370ffd-7228-45d6-b639-473fe00e3981" />
+    <agent hostname="0772dfbbb5ae" ipaddress="172.18.0.3" uuid="7bf704b7-d6b8-487a-90e6-78bb3d5d338c" />
   </agents>
 </cruise>

@@ -12,3 +12,4 @@ godata/config/jetty.xml
 godata/config/keystore
 godata/config/logback-include.xml
 godata/config/truststore
+.ssh
