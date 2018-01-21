@@ -33,8 +33,9 @@ pipelines:
           jobs:
             build:
               artifacts:
-                source: dist
-                destination: dist
+                - build:
+                    source: dist
+                    destination: dist
               tabs:
                 dist: dist
               resources:
