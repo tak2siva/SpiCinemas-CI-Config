@@ -13,6 +13,7 @@ pipelines:
                 - java
               tasks:
                 - script: |
+                    cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
                     ./gradlew clean test
       - build:
           jobs:
