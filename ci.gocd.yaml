@@ -2,8 +2,8 @@ format_version: 2
 environments:
   ci:
     pipelines:
-      - ui
-      - backend
+      - "cinemas-ui"
+      - "cinemas-api"
 pipelines:
   "cinemas-ui":
     group: movies
