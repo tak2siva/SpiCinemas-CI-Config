@@ -7,7 +7,24 @@
     </config-repo>
   </config-repos>
   <pipelines group="movies" />
+  <environments>
+    <environment name="ci">
+      <agents>
+        <physical uuid="56f9ff51-989f-4473-8f85-314fe4c04300" />
+        <physical uuid="e6187b82-fc3f-41b6-8e57-3936b99ed346" />
+      </agents>
+    </environment>
+  </environments>
   <agents>
-    <agent hostname="0772dfbbb5ae" ipaddress="172.18.0.3" uuid="7bf704b7-d6b8-487a-90e6-78bb3d5d338c" />
+    <agent hostname="f1ba2bd7a47b" ipaddress="172.18.0.5" uuid="56f9ff51-989f-4473-8f85-314fe4c04300">
+      <resources>
+        <resource>node</resource>
+      </resources>
+    </agent>
+    <agent hostname="96135cf37bc6" ipaddress="172.18.0.3" uuid="e6187b82-fc3f-41b6-8e57-3936b99ed346">
+      <resources>
+        <resource>java</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>

@@ -1,5 +1,6 @@
 godata/addons/
-godata/artifcats
+godata/artifacts
+godata/config/cruise-config.xml
 godata/db
 godata/logs
 godata/plugins/bundled
