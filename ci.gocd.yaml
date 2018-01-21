@@ -6,19 +6,40 @@ environments:
       - "cinemas-api"
 pipelines:
   "cinemas-ui":
-    group: movies
+    group: just-cinemas
     materials:
       cinemas-ui:
         git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-ui.git"
     stages:
+      - lint:
+          jobs:
+            lint:
+              resources:
+                - node
+              tasks:
+                - script: |
+                    npm install
+                    npm run lint
+      - test:
+          jobs:
+            test:
+              resources:
+                - node
+              tasks:
+                - script: |
+                    npm install
+                    npm run test
       - build:
           jobs:
             build:
+              resources:
+                - node
               tasks:
                 - script: |
-                    echo "it works"
+                    npm install
+                    npm run build
   "cinemas-api":
-    group: movies
+    group: just-cinemas
     materials:
       cinemas-backend:
         git: "git@git.thoughtworks.net:bootcamp-trainers/just-cinemas-services.git"
