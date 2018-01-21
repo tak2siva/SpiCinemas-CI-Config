@@ -13,8 +13,8 @@ pipelines:
                 - java
               artifacts:
                 - test:
-                    source: build/reports/tests/test/
-                    destination: test-reports/
+                    source: ./build/reports/tests/test/
+                    destination: test-reports
               tabs:
                 report: test-reports/index.html
               tasks:
@@ -26,11 +26,11 @@ pipelines:
             build:
               artifacts:
                 - build:
-                    source: build/libs/
+                    source: ./build/libs/
                     destination: libs/
               resources:
                 - java
               tasks:
                 - script: |
                     cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
-                    ./gradlew clean test
+                    ./gradlew clean assemble
