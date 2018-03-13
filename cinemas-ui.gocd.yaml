@@ -4,7 +4,7 @@ pipelines:
     group: just-cinemas
     materials:
       cinemas-ui:
-        git: "git@git.thoughtworks.net:BootcampTeamB/just-cinemas-ui.git"
+        git: "https://github.com/Sethuraman/just-cinemas-ui.git"
     stages:
       - lint:
           jobs:

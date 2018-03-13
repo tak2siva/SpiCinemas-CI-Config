@@ -4,7 +4,7 @@ pipelines:
     group: just-cinemas
     materials:
       cinemas-backend:
-        git: "git@git.thoughtworks.net:BootcampTeamB/just-cinemas-services.git"
+        git: "https://github.com/tak2siva/SpiCinemas.git"
     stages:
       - test:
           jobs:
