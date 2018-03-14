@@ -20,7 +20,7 @@ pipelines:
               tasks:
                 - script: |
                     mv src/main/resources/application-ci.yml src/main/resources/application-test.yml
-                    ./gradlew clean test
+                    ./gradlew clean test -Penv=ci
       - build:
           jobs:
             build:
@@ -32,5 +32,5 @@ pipelines:
                 - java
               tasks:
                 - script: |
-                    ./gradlew clean assemble
+                    ./gradlew clean assemble -Penv=ci
                     cp build/libs/*.jar /artifacts/.
