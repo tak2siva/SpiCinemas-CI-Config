@@ -33,3 +33,4 @@ pipelines:
               tasks:
                 - script: |
                     ./gradlew clean assemble
+                    cp build/libs/*.jar /artifacts/.

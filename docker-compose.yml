@@ -23,6 +23,7 @@ services:
       AGENT_AUTO_REGISTER_RESOURCES: java
       AGENT_AUTO_REGISTER_ENVIRONMENTS: ci
     volumes:
+      - $PWD/artifacts:/artifacts
       - $PWD/.ssh:/home/go/.ssh
 
   server:
