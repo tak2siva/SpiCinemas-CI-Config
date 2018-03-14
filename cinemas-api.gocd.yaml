@@ -19,7 +19,8 @@ pipelines:
                 Report: test-reports/build/reports/tests/test/index.html
               tasks:
                 - script: |
-                    ./gradlew clean test -Penv=ci
+                    mv src/main/resources/application-ci.yml src/main/resources/application-test.yml
+                    ./gradlew clean test
       - build:
           jobs:
             build:

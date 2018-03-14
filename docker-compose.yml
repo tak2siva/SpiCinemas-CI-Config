@@ -38,6 +38,6 @@ services:
     environment:
       POSTGRES_USER: spiuser
       POSTGRES_PASSWORD: spiuser
-      POSTGRES_DB: spicinemas
+      POSTGRES_DB: spicinemas_test
     ports:
-      - "7654:5432"
+      - "5432:5432"
