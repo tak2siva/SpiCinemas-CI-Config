@@ -19,8 +19,7 @@ pipelines:
                 Report: test-reports/build/reports/tests/test/index.html
               tasks:
                 - script: |
-                    cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
-                    ./gradlew clean test
+                    ./gradlew clean test -Penv=ci
       - build:
           jobs:
             build:
@@ -32,5 +31,4 @@ pipelines:
                 - java
               tasks:
                 - script: |
-                    cp src/test/resources/test-application.properties.ci src/test/resources/test-application.properties
                     ./gradlew clean assemble
