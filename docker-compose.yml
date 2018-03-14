@@ -36,6 +36,8 @@ services:
   db:
     image: postgres:9.6.6
     environment:
-      POSTGRES_USER: testuser
-      POSTGRES_PASSWORD: testpass
-      POSTGRES_DB: testdb
+      POSTGRES_USER: spiuser
+      POSTGRES_PASSWORD: spiuser
+      POSTGRES_DB: spicinemas
+    ports:
+      - "7654:5432"
