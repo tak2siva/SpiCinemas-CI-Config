@@ -15,6 +15,7 @@ pipelines:
                 - script: |
                     npm install yarn -g
                     /opt/node-*-linux-x64/bin/yarn install
+                    ln -s /opt/node-*-linux-x64/bin/yarn /bin/yarn
                     CI=true TEST_REPORT_PATH=reports/test yarn test --coverage
      - build:
           jobs:
