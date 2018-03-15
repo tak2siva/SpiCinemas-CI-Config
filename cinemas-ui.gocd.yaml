@@ -13,7 +13,7 @@ pipelines:
                 - node
               tasks:
                 - script: |
-                    npm install yarn -g
+                    npm install yarn
                     yarn install
                     CI=true TEST_REPORT_PATH=reports/test yarn test --coverage
      - build:
