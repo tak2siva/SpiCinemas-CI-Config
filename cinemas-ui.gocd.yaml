@@ -14,7 +14,7 @@ pipelines:
               tasks:
                 - script: |
                     yarn install
-                    CI=true TEST_REPORT_PATH=reports/test yarn test  --coverage
+                    CI=true TEST_REPORT_PATH=reports/test yarn test --coverage
       - build:
           jobs:
             build:
