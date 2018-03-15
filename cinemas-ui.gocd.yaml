@@ -22,6 +22,7 @@ pipelines:
                 - node
               tasks:
                 - script: |
+                    yarn add react
                     yarn build
                     cp -R build/* /static-assets/*
                     touch /static-assets/restart.txt
