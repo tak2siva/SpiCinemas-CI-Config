@@ -2,7 +2,9 @@ version: '3'
 
 services:
   agent-nodejs:
-    image: jskswamy/gocd-agent-debian8-nodejs9.4:v17.12.0
+    build:
+      context: .
+      dockerfile: UI-Agent-Dockerfile
     depends_on:
       - server
     environment:
