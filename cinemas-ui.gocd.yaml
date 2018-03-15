@@ -6,24 +6,15 @@ pipelines:
       cinemas-ui:
         git: "https://github.com/Sethuraman/just-cinemas-ui.git"
     stages:
-      - lint:
-          jobs:
-            lint:
-              resources:
-                - node
-              tasks:
-                - script: |
-                    npm install
-                    npm run lint
-      - test:
+     - test:
           jobs:
             test:
               resources:
                 - node
               tasks:
                 - script: |
-                    npm install
-                    npm run test
+                    yarn install
+                    CI=true TEST_REPORT_PATH=reports/test yarn test  --coverage
       - build:
           jobs:
             build:
@@ -35,5 +26,5 @@ pipelines:
                 - node
               tasks:
                 - script: |
-                    npm install
-                    npm run dist
+                    yarn build
+                    cp -R build/* /static-assets/*

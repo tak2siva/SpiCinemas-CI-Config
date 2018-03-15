@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
   agent-nodejs:
@@ -24,6 +24,7 @@ services:
       AGENT_AUTO_REGISTER_ENVIRONMENTS: ci
     volumes:
       - $PWD/artifacts:/artifacts
+      - $PWD/static-assets:/static-assets
       - $PWD/.ssh:/home/go/.ssh
 
   server:
