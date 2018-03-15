@@ -1,5 +1,7 @@
 FROM jskswamy/gocd-agent-debian8-nodejs9.4:v17.12.0
 
+RUN usermod -a -G sudo go
 RUN npm install yarn -g
 RUN chown -R root:root /opt/node-*
 RUN chmod -R 777 /opt/node-*
+RUN ln -s /opt/node-*-linux-x64/bin/yarn /bin/yarn
