@@ -34,3 +34,4 @@ pipelines:
                 - script: |
                     ./gradlew clean assemble -Penv=ci
                     cp build/libs/*.jar /artifacts/.
+                    touch /artifacts/restart.txt

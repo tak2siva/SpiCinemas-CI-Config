@@ -13,6 +13,7 @@ pipelines:
                 - node
               tasks:
                 - script: |
+                    npm install yarn -g
                     yarn install
                     CI=true TEST_REPORT_PATH=reports/test yarn test --coverage
      - build:
@@ -24,3 +25,4 @@ pipelines:
                 - script: |
                     yarn build
                     cp -R build/* /static-assets/*
+                    touch /static-assets/restart.txt
