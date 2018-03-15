@@ -15,3 +15,12 @@ pipelines:
                 - script: |
                     yarn install
                     CI=true TEST_REPORT_PATH=reports/test yarn test --coverage
+     - build:
+          jobs:
+            build:
+              resources:
+                - node
+              tasks:
+                - script: |
+                    yarn build
+                    cp -R build/* /static-assets/*
